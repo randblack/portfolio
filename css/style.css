@@ -100,14 +100,14 @@ a {
   background-image: linear-gradient(to bottom right, #80C3FF, #6CD962);
   float: left;
   width: 220px;
-  height: 320px;
+  height: 350px;
 }
 
 #project2 {
   float: left;
   background-image: linear-gradient(to bottom right, #FFD180, #D96262);
   width: 220px;
-  height: 320px;
+  height: 350px;
   margin-left: 60px;
   background-color: red;
 }
@@ -116,7 +116,7 @@ a {
   background-image: linear-gradient(to bottom right, #BB80FF, #62D0D9);
   float: left;
   width: 220px;
-  height: 320px;
+  height: 350px;
   margin-left: 60px;
   background-color: red;
 }
@@ -147,6 +147,19 @@ a {
 .appDescription {
   font-size: 0.8em;
   padding-top: 20px;
+}
+
+.projectMockup {
+  width: 220px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  padding-bottom: 50px;
+}
+
+.projectMockupImg {
+  width: 100%;
 }
 
 .webappLink {
