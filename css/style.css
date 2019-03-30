@@ -32,7 +32,6 @@ a {
   color: rgb(0, 200, 255);
 }
 
-
 #nameLogo {
   color: rgb(0, 200, 255);
   font-weight: 700;
@@ -233,7 +232,7 @@ a {
   #portfolio {
     width: 100%;
     margin: auto;
-    margin-top: 75px;
+    margin-top: 30px;
   }
 
   .projectDiv {
