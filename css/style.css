@@ -2,7 +2,6 @@ body {
   margin: 0px;
   font-family: 'Quicksand', sans-serif;
   height:100%;
-  background: linear-gradient(rgb(230, 230, 230), rgb(255, 255, 255)) fixed;
 }
 
 a {
@@ -12,17 +11,20 @@ a {
 #header {
   z-index: 1;
   position: fixed;
-  background-color: rgba(230,230,230);
+  background-color: rgb(255, 255, 255);
   width: 100%;
   height: 50px;
   font-family: 'Quicksand', sans-serif;
-  box-shadow: 0px 0px 20px rgb(199, 199, 199);
+}
+
+.active {
+  box-shadow: 0px 0px 20px rgb(0, 0, 0, .15);
 }
 
 #headerContent {
   z-index: 2;
   color: rgb(60, 60, 60);
-  max-width: 960px;
+  max-width: 85vw;
   height: 50px;
   margin: auto;
   padding-top: 10px;
@@ -58,20 +60,29 @@ a {
 }
 
 #summary {
-  color: rgb(100, 100, 100);
-  padding-top: 125px;
+  color: #333;
+  padding-top: 20vh;
   height: 100%;
-  width: 780px;
+  width: 60vw;
   margin: auto;
   text-align: justify;
   text-justify: inter-word;
+  line-height: 170%;
+}
+
+#portrait {
+  display: block;
+  margin: 0 auto 8vh auto;
+  height: 30vh;
+  border-radius: 15vh;
+  box-shadow: 0px 0px 20px rgb(0, 0, 0, .15);
 }
 
 #contact {
   text-align: center;
   padding-top: 30px;
   width: 780px;
-  margin: auto;
+  margin: 0 auto 15vh auto;
 }
 
 .contactIcon {
@@ -96,105 +107,80 @@ a {
   margin-top: 75px;
 }
 
-#project1 {
-  background-image: linear-gradient(to bottom right, #80C3FF, #6CD962);
-  float: left;
-  width: 220px;
-  height: 350px;
-}
-
-#project2 {
-  float: left;
-  background-image: linear-gradient(to bottom right, #FFD180, #D96262);
-  width: 220px;
-  height: 350px;
-  margin-left: 60px;
-  background-color: red;
-}
-
-#project3 {
-  background-image: linear-gradient(to bottom right, #BB80FF, #62D0D9);
-  float: left;
-  width: 220px;
-  height: 350px;
-  margin-left: 60px;
-  background-color: red;
-}
-
-.projectDiv {
-  float:left;
-  height: 350px;
-}
-
-.projectTile {
-  padding: 10px;
-  color: #fff;
-  box-sizing: border-box;
-  font-size: 1.2em;
-  position:relative;
-  margin-bottom: 5px;
-}
-
-.projectTile:hover { 
-  box-shadow: 0px 0px 20px rgb(199, 199, 199);
-}
-
-.projectTitle {
-  text-shadow: 0px 0px 20px rgb(65, 65, 65);
-  font-weight: 500;
-}
-
-.appDescription {
-  font-size: 0.8em;
-  padding-top: 20px;
-}
-
-.projectMockup {
-  width: 220px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
+.project {
+  display: grid;
+  grid-row-gap: 10px;
+  grid-template-columns: auto auto;
+  width: 85vw;
   margin: auto;
-  padding-bottom: 50px;
+  height: calc(100vh - 50px);
 }
 
-.projectMockupImg {
-  width: 100%;
+.screenshotRight {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  align-content: flex-end;
+  flex-wrap: wrap;
+  flex-grow: 1
 }
 
-.webappLink {
-  padding: 10px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  font-size: 1em;
-  font-weight: 700;
-  color: #fff;
-  padding-bottom: 30px;
+.descriptionLeft {
+  padding: 0 5vw 0 10vw;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-content: center;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  line-height: 170%;
 }
 
-.appTags {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  padding-bottom: 10px;
-  padding-left: 10px;
-  font-size: 0.8em;
+.descriptionRight {
+  padding: 0 5vw 0 5vw;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: right;
+  align-content: center;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  line-height: 170%;
 }
 
-#githubLink1 {
-  margin-left: 40px;
+.screenshotOne {
+  width: 40vw;
+  height: auto;
 }
 
-#githubLink2 {
-  margin-left: 105px;
+.screenshotTwo {
+  width: 40vw;
+  height: auto;
 }
 
-#githubLink3 {
-  margin-left: 105px;
+.demoLinks {
+  display: block;
+}
+
+.demoLink {
+  margin: 0 10vh 0 10vh;
+  color: #333;
+  font-weight: 300;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2.5em;
+  line-height: 120%;
 }
 
 @media only screen and (max-width: 768px) {
+
+  body {
+    margin: 0;
+  }
+
   #header {
     height: 60px;
   }
@@ -225,7 +211,7 @@ a {
   }
 
   #summary {
-    width: 100%;
+    width: 100vw;
     padding: 15px;
     padding-top: 100px;
     box-sizing: border-box;
@@ -249,55 +235,71 @@ a {
     margin-top: 30px;
   }
 
-  .projectDiv {
-    margin-bottom: 25px;
-    height: 350px;
-    width: 100%;
+  .project {
+    grid-template-columns: auto;
+    margin: 0 auto 50px auto;
+    height: auto;
+    width: 100vw;
   }
 
-  .projectTile {
-    width: 100%;
-    margin-bottom: 5px;
+  .screenshotRight {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-grow: 0
+  }
+  
+  .descriptionLeft {
+    padding: 0 10px 0 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-grow: 0;
+    line-height: 170%;
+  }
+  
+  .descriptionRight {
+    padding: 0 10px 0 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-grow: 0;
+    line-height: 170%;
   }
 
-  #project1 {
-    margin: auto;
-    float: none;
-    width: 220px;
-    height: 320px;
-  }
-  
-  #project2 {
-    float: none;
-    width: 220px;
-    height: 320px;
-    margin: auto;
-  }
-  
-  #project3 {
-    float: none;
-    width: 220px;
-    height: 320px;
-    margin: auto;
+  .screenshotTwo {
+    box-sizing: border-box;
+    width: calc(100vw - 30px);
+    height: auto;
+    margin: 15px;
   }
 
-  #githubLink1 {
-    text-align: center;
-    width: 100%;
-    margin: auto;
+  .screenshotOne {
+    box-sizing: border-box;
+    width: calc(100vw - 30px);
+    height: auto;
+    margin: 15px;
   }
-  
-  #githubLink2 {
-    text-align: center;
-    display: block;
-    width: 100%;
-    margin: auto;
+
+  .demoLinks {
+    margin: 0 0 35px 0;
   }
-  
-  #githubLink3 {
+  h1 {
     text-align: center;
-    display: block;
-    width: 100%;
-    margin: auto;
+    width: 100%
+  }
+
+  .flipped {
+    display: flex;
+    flex-direction: column-reverse;
   }
 }

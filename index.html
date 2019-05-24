@@ -8,6 +8,19 @@
   <link rel="stylesheet" href="./css/style.css">
   <link href="https://fonts.googleapis.com/css?family=Quicksand:400,500,700" rel="stylesheet">
   <title>Rand Black - Web Developer</title>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script>
+    $(window).scroll(function () {
+      var scroll = $(window).scrollTop();
+      if (scroll > 0) {
+        $("#header").addClass("active");
+      }
+      else {
+        $("#header").removeClass("active");
+      }
+    });
+  </script>
 </head>
 
 <body>
@@ -36,6 +49,7 @@
     </div>
   </div>
   <div id="summary">
+    <img id="portrait" src="./images/portrait.png">
     Interface savvy Front End Developer with a passion for innovative
     technologies. Experiences in HTML,
     CSS, and Javascript along with design tools PhotoShop, Illustrator, InDesign, and Sketch. Experienced in
@@ -54,90 +68,101 @@
     <a class="contactLink" href="tel:1-562-666-9010"><img class="contactIcon"
         src="./images/telephone-handle-silhouette.svg">562 666 9010</a>
   </div>
-  <div id="portfolio">
 
-    <div class="projectDiv">
-      <a href="https://randblack.github.io/the-alchemists-workshop/">
-        <div class="projectTile" id="project1">
-          <div class="projectTitle">
-            The Alchemist's Workshop
-          </div>
-          <div class="appDescription">
-            Reach the target value by selecting one of four elements, all with random values.
-          </div>
-          <div class="projectMockup">
-            <img class="projectMockupImg" src="images/alchemistsWorkshopSS.png">
-          </div>
-          <div class="webappLink">
-            View WebApp >
-          </div>
-          <div class="appTags">
-            #html #css #javascript
-          </div>
-        </div>
-      </a>
-      <div id="githubLink1">
-        <a href="https://github.com/randblack/the-alchemists-workshop">
-          View on GitHub >
-        </a>
+  <div class="project">
+    <div class="screenshotRight">
+      <img class="screenshotTwo" src="./images/whos-that-pokemon.png">
+      <div class="demoLinks">
+        <a class="demoLink" href="https://github.com/randblack/whos-that-pokemon">View on Github></a>
+        <a href="https://randblack.github.io/whos-that-pokemon/">View WebApp></a>
       </div>
     </div>
 
-    <div class="projectDiv">
-      <a href="https://randblack.github.io/whos-that-pokemon/">
-        <div class="projectTile" id="project2">
-          <div class="projectTitle">
-            Who's That Pokemon?
-          </div>
-          <div class="appDescription">
-            Test your Poke-Knowledge with this guessing game before time runs out!
-          </div>
-          <div class="projectMockup">
-            <img class="projectMockupImg" src="images/whosThatPokemonSS.png">
-          </div>
-          <div class="webappLink">
-            View WebApp >
-          </div>
-          <div class="appTags">
-            #html #css #javascript
-          </div>
-        </div>
-      </a>
-      <div id="githubLink2">
-        <a href="https://github.com/randblack/whos-that-pokemon">
-          View on GitHub >
-        </a>
-      </div>
-    </div>
-
-    <div class="projectDiv">
-      <a href="https://tommyyxou.github.io/Paper-Vs-Picture/">
-        <div class="projectTile" id="project3">
-          <div class="projectTitle">
-            Paper vs Picture<br /><br />
-          </div>
-          <div class="appDescription">
-            An app to determine if the book is better than the movie based on ratings from IMDB & Google
-            Books.
-          </div>
-          <div class="projectMockup">
-            <img class="projectMockupImg" src="images/pictureVsPaperSS.png">
-          </div>
-          <div class="webappLink">
-            View WebApp >
-          </div>
-          <div class="appTags">
-            #css #javascript
-          </div>
-        </div>
-      </a>
-      <div id="githubLink3">
-        <a href="https://github.com/randblack/Paper-Vs-Picture">
-          View on GitHub >
-        </a>
-      </div>
+    <div class="descriptionLeft">
+      <h1>Who's that Pokémon?</h1>
+      <p>
+        You will be given 10 seconds to guess which pokemon is shown on the Pokédex screen.
+        After 10 seconds, or a guess you will be shown the answer.
+        You will see your results at the end of the quiz.
+        Good Luck!
+      </p>
+      <p>
+        #html&nbsp;&nbsp; #css&nbsp;&nbsp; #javascript
+      </p>
     </div>
   </div>
+
+  <div class="project flipped">
+
+    <div class="descriptionRight">
+      <h1>Media Junkie</h1>
+      <p>
+        A media recommendation app 100% community driven. A short 10 questionaire pairs the user with another and
+        returns their suggestions. Additional results are the most
+        suggested title on Netflix, Hulu, and Amazon Prime, the most popular movie and
+        most popular tv show of the day, and trending titles.
+      </p>
+      <p>
+        #html &nbsp;&nbsp; #css &nbsp;&nbsp; #javascript &nbsp;&nbsp; #node.js &nbsp;&nbsp; #mysql
+      </p>
+    </div>
+
+    <div class="screenshotRight">
+      <img class="screenshotOne" src="./images/media-junkie.png">
+      <div class="demoLinks">
+        <a class="demoLink" href="https://github.com/randblack/media_junkie">View on Github></a>
+        <a href="https://mediajunkieapp.herokuapp.com/">View WebApp></a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="project">
+    <div class="screenshotRight">
+      <img class="screenshotOne" src="./images/paper-vs-picture.png">
+      <div class="demoLinks">
+        <a class="demoLink" href="https://github.com/randblack/Paper-Vs-Picture">View on Github></a>
+        <a href="https://tommyyxou.github.io/Paper-Vs-Picture/">View WebApp></a>
+      </div>
+    </div>
+
+    <div class="descriptionLeft">
+      <h1>Paper vs Picture</h1>
+      <p>
+        A lightweight webapp that determines wether the book was better than the movie based on ratings from IMDB and
+        Google Books, and displays both versions with plot summary and cover art.
+      </p>
+      <p>
+        #html &nbsp;&nbsp; #css &nbsp;&nbsp; #javascript &nbsp;&nbsp; #ajax api
+      </p>
+    </div>
+  </div>
+
+  <div class="project flipped">
+
+    <div class="descriptionRight">
+      <h1>The Alchemist's Workshop</h1>
+      <p>
+        You will be given a random number at the start of the game. By selecting one of the four elements, you will
+        add points to your score. To win your score must equal the target number, if your score goes above the target
+        you will lose. The value of each element is hidden and every game gives the crystals a new value. </br>
+        Good Luck, Traveler...
+      </p>
+      <p>
+        #html&nbsp;&nbsp; #css&nbsp;&nbsp; #javascript
+      </p>
+    </div>
+
+    <div class="screenshotRight">
+      <img class="screenshotOne" src="./images/alchemists-workshop.png">
+      <div class="demoLinks">
+        <a class="demoLink" href="https://github.com/randblack/the-alchemists-workshop">View on Github></a>
+        <a href="https://randblack.github.io/the-alchemists-workshop/">View WebApp></a>
+      </div>
+    </div>
+
+  </div>
+
 </body>
 
 </html>
