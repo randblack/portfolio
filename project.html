@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand:400,500,700" rel="stylesheet">
+  <title>Document</title>
+  <style>
+    body {
+      font-family: 'Quicksand', sans-serif;
+      margin: 0;
+      color: #333;
+    }
+
+    a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    #content {
+      height: 100vh;
+      overflow-y: scroll;
+      scroll-snap-type: y mandatory;
+    }
+
+    .project {
+      height: 100vh;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 50vw 50vw;
+      grid-template-rows: 15vh 70vh 15vh;
+      scroll-snap-align: start;
+      position: relative;
+    }
+
+    .project:after {
+      content: "";
+      position: absolute;
+      left: 0%;
+      bottom: 0;
+      height: 1px;
+      width: 25%;
+      border-bottom: 1px solid rgb(184, 184, 184);
+    }
+
+    .project>div {
+      top: 0;
+      z-index: 99;
+      position: relative;
+      background-color: rgba(255, 255, 255, 0.9)
+    }
+
+    .projectTitle {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      grid-column: 1 / 4;
+      padding: 7vh 0 0 0;
+    }
+
+    .projectTitle>img {
+      width: 50px;
+      margin: 20px;
+      height: auto;
+    }
+
+    .projectScreenshot {
+      grid-column: 1 / 2;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding: 0 3em 0 0;
+    }
+
+    .mobileScreenshot {
+      width: 15%;
+      border-radius: 1em;
+      border: 0.2em solid rgb(219, 219, 219);
+      box-shadow: 0 1vh 4vh rgba(0, 0, 0, 0.4);
+      z-index: 2;
+      height: auto;
+      position: absolute;
+      left: 10%;
+    }
+
+    .desktopScreenshot {
+      width: 80%;
+      border-radius: 0.5em 0.5em 0 0;
+      box-shadow: 0 1vh 4vh rgba(0, 0, 0, 0.4);
+      z-index: 1;
+      height: auto;
+    }
+
+    /* 
+    .project>div {
+      border: 1px solid red;
+    } */
+
+    .projectDetails {
+      display: grid;
+      align-content: space-around;
+      font-size: 1.2em;
+      grid-column: 2 / 4;
+      padding: 0 5em 0 2em;
+    }
+
+    .tags {
+      color: #999;
+      line-height: 2em;
+    }
+
+    .webappLink {
+      grid-column: 1 / 2;
+    }
+
+    .webappButton {
+      float: right;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1em;
+      font-weight: bold;
+      background: rgba(0, 0, 0, 0.07);
+      border-radius: 1em;
+      line-height: 2.8em;
+      margin: 0 5em 0 0;
+      width: 11em;
+      transition: .5s;
+    }
+
+    .webappButton:hover {
+      background: rgb(0, 200, 255);
+    }
+
+    .githubButton {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1em;
+      font-weight: bold;
+      background: rgba(0, 0, 0, 0.07);
+      border-radius: 1em;
+      line-height: 2.8em;
+      margin: 0 0 0 5em;
+      width: 11em;
+      transition: .5s;
+    }
+
+    .githubButton:hover {
+      background: rgb(0, 200, 255);
+    }
+
+    .webappButton>img {
+      height: 1.5em;
+      width: auto;
+      padding: 0 0.5em 0 0;
+    }
+
+    .githubButton>img {
+      height: 1.5em;
+      width: auto;
+      padding: 0 0.5em 0 0;
+    }
+
+    .githubLink {
+      grid-column: 2 / 4;
+    }
+
+    h1 {
+      display: inline;
+      font-size: 2.5em;
+      margin: 0;
+    }
+
+    .tag {
+      padding: 0 2.5em 0 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="content">
+    <div class="project">
+      <div class="projectTitle">
+        <img src="../../Desktop/favicon.png">
+        <h1>Who's that Pokémon?</h1>
+      </div>
+      <div class="projectScreenshot">
+        <img class="mobileScreenshot" src="../../Desktop/Mobile Portrait.png">
+        <img class="desktopScreenshot" src="../../Desktop/desktop mockup.png"> </div>
+      <div class="projectDetails">
+        <div class="summary">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br /><br />
+
+          Morbi viverra semper orci vitae feugiat.
+          Maecenas mi odio, auctor nec blandit non, lacinia ut orci. <br /><br />
+
+          Nulla commodo sem at semper feugiat. Donec ac nisi et urna maximus aliquam.
+        </div>
+        <div class="tags">
+          <span class="tag">#HTML</span>
+          <span class="tag">#CSS</span>
+          <span class="tag">#JavaScript</span>
+          <span class="tag">#Node.js</span>
+          <span class="tag">#express.js</span>
+          <span class="tag">#mysql</span>
+        </div>
+      </div>
+      <div class="webappLink">
+        <a href="http://www.github.com/randblack">
+          <div class="webappButton">
+            <img src="../../Downloads/link-solid.svg">
+            View Webapp
+          </div>
+        </a>
+      </div>
+      <div class="githubLink">
+        <a href="http://www.github.com/randblack">
+          <div class="githubButton">
+            <img src="../../Downloads/github-brands.svg">
+            View on Github
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="projectTitle">
+        <img src="../../Desktop/favicon.png">
+        <h1>Who's that Pokémon?</h1>
+      </div>
+      <div class="projectScreenshot">
+        <img class="mobileScreenshot" src="../../Desktop/Mobile Portrait.png">
+        <img class="desktopScreenshot" src="../../Desktop/desktop mockup.png"> </div>
+      <div class="projectDetails">
+        <div class="summary">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br /><br />
+
+          Morbi viverra semper orci vitae feugiat.
+          Maecenas mi odio, auctor nec blandit non, lacinia ut orci. <br /><br />
+
+          Nulla commodo sem at semper feugiat. Donec ac nisi et urna maximus aliquam.
+        </div>
+        <div class="tags">
+          <span class="tag">#HTML</span>
+          <span class="tag">#HTML</span>
+          <span class="tag">#HTML</span>
+          <span class="tag">#HTML</span>
+          <span class="tag">#HTML</span>
+          <span class="tag">#HTML</span>
+        </div>
+      </div>
+      <div class="webappLink">
+        <div class="webappButton">
+          <img src="../../Downloads/code-solid.svg">
+          View Webapp
+        </div>
+      </div>
+      <div class="githubLink">
+        <div class="githubButton">
+          <img src="../../Downloads/github-brands.svg">
+          View on Github
+        </div>
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="projectTitle">
+        <img src="../../Desktop/favicon.png">
+        <h1>Who's that Pokémon?</h1>
+      </div>
+      <div class="projectScreenshot">
+        <img class="mobileScreenshot" src="../../Desktop/Mobile Portrait.png">
+        <img class="desktopScreenshot" src="../../Desktop/desktop mockup.png"> </div>
+      <div class="projectDetails">
+        <div class="summary">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br /><br />
+
+          Morbi viverra semper orci vitae feugiat.
+          Maecenas mi odio, auctor nec blandit non, lacinia ut orci. <br /><br />
+
+          Nulla commodo sem at semper feugiat. Donec ac nisi et urna maximus aliquam.
+        </div>
+        <div class="tags">
+          <span class="tag">#HTML</span>
+          <span class="tag">#HTML</span>
+          <span class="tag">#HTML</span>
+          <span class="tag">#HTML</span>
+          <span class="tag">#HTML</span>
+          <span class="tag">#HTML</span>
+        </div>
+      </div>
+      <div class="webappLink">
+        <div class="webappButton">
+          <img src="../../Downloads/code-solid.svg">
+          View Webapp
+        </div>
+      </div>
+      <div class="githubLink">
+        <div class="githubButton">
+          <img src="../../Downloads/github-brands.svg">
+          View on Github
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
